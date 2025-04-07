@@ -1,0 +1,74 @@
+{
+  "app": {
+    "title": "Vibe Template",
+    "description": "A modern React starter with TypeScript, Tailwind CSS, Shadcn/UI, Framer Motion, and React Router.",
+    "createdBy": "Created by",
+    "copyright": "© 2025 Vibe Template"
+  },
+  "buttons": {
+    "exploreFeatures": "Explore Features",
+    "count": "Count: {{count}}"
+  },
+  "features": {
+    "title": "Features",
+    "backToHome": "Back to Home",
+    "powerfulFeatures": "Powerful Features",
+    "themeProvider": {
+      "title": "Theme Provider",
+      "description": "Built-in dark mode toggle with system preference detection and localStorage persistence. Based on shadcn's theme implementation using Tailwind's dark mode class strategy."
+    },
+    "tailwind": {
+      "title": "Tailwind CSS",
+      "description": "Utility-first CSS framework for rapid UI development. Create beautiful designs without leaving your HTML."
+    },
+    "framerMotion": {
+      "title": "Framer Motion",
+      "description": "Production-ready animation library for React. Create fluid animations with minimal code."
+    },
+    "shadcn": {
+      "title": "Shadcn/UI",
+      "description": "Beautifully designed components built with Radix UI and Tailwind CSS. Re-usable components that you can copy and paste into your apps."
+    },
+    "reactRouter": {
+      "title": "React Router",
+      "description": "Client-side routing for React applications. Navigate between views without full page reloads."
+    },
+    "lucide": {
+      "title": "Lucide React",
+      "description": "Beautiful & consistent icon toolkit for React applications. Over 1000 icons available."
+    },
+    "themeOptions": "Theme Options",
+    "currentTheme": "Current theme:",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "toggleTheme": "Toggle theme",
+    "simpleAndPowerful": "Simple & Powerful",
+    "animatedBox": "Animated Box",
+    "startAnimation": "Start Animation",
+    "stopAnimation": "Stop Animation",
+    "customCursor": {
+      "title": "Custom Cursor",
+      "description": "An interactive custom cursor that replaces the default mouse cursor with animated elements that respond to user interactions.",
+      "enable": "Enable Custom Cursor",
+      "cursorColor": "Cursor Color",
+      "lightModeColor": "Light Mode Color",
+      "hoverText": "Hover over elements to see different states",
+      "clickable": "Clickable",
+      "button": "Button"
+    },
+    "on": "On",
+    "off": "Off",
+    "i18next": {
+      "title": "i18next",
+      "description": "Powerful internationalization framework with support for multiple languages, plurals, context, and more.",
+      "languageOptions": "Language Options",
+      "currentLanguage": "Current Language",
+      "selected": "Selected",
+      "english": "English",
+      "chinese": "中文",
+      "example": "Translation Example",
+      "sampleText": "This is a sample text to demonstrate language switching."
+    }
+  }
+}

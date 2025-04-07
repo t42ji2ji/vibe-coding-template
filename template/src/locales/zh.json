@@ -1,0 +1,74 @@
+{
+  "app": {
+    "title": "Vibe Template",
+    "description": "一個現代化的 React 啟動模板，包含 TypeScript、Tailwind CSS、Shadcn/UI、Framer Motion 和 React Router。",
+    "createdBy": "創建者",
+    "copyright": "© 2025 Vibe Template"
+  },
+  "buttons": {
+    "exploreFeatures": "探索功能",
+    "count": "計數: {{count}}"
+  },
+  "features": {
+    "title": "功能",
+    "backToHome": "返回首頁",
+    "powerfulFeatures": "強大的功能",
+    "themeProvider": {
+      "title": "主題切換",
+      "description": "內置暗黑模式切換，支持系統偏好檢測和 localStorage 持久化。基於 shadcn 的主題實現，使用 Tailwind 的暗黑模式類策略。"
+    },
+    "tailwind": {
+      "title": "Tailwind CSS",
+      "description": "實用優先的 CSS 框架，用於快速 UI 開發。無需離開 HTML 即可創建精美設計。"
+    },
+    "framerMotion": {
+      "title": "Framer Motion",
+      "description": "React 的生產級動畫庫。使用最少的代碼創建流暢的動畫。"
+    },
+    "shadcn": {
+      "title": "Shadcn/UI",
+      "description": "使用 Radix UI 和 Tailwind CSS 構建的精美組件。可以複製和貼上到您的應用程序中的可重用組件。"
+    },
+    "reactRouter": {
+      "title": "React Router",
+      "description": "React 應用程序的客戶端路由。無需完整頁面重新加載即可在視圖之間導航。"
+    },
+    "lucide": {
+      "title": "Lucide React",
+      "description": "React 應用程序的精美且一致的圖標工具包。提供超過 1000 個圖標。"
+    },
+    "themeOptions": "主題選項",
+    "currentTheme": "當前主題：",
+    "light": "明亮",
+    "dark": "暗黑",
+    "system": "系統",
+    "toggleTheme": "切換主題",
+    "simpleAndPowerful": "簡單而強大",
+    "animatedBox": "動畫盒子",
+    "startAnimation": "開始動畫",
+    "stopAnimation": "停止動畫",
+    "customCursor": {
+      "title": "自定義游標",
+      "description": "互動式自定義游標，用動畫元素替換默認滑鼠游標，響應用戶互動。",
+      "enable": "啟用自定義游標",
+      "cursorColor": "游標顏色",
+      "lightModeColor": "淺色模式顏色",
+      "hoverText": "將滑鼠移到元素上查看不同狀態",
+      "clickable": "可點擊",
+      "button": "按鈕"
+    },
+    "on": "開啟",
+    "off": "關閉",
+    "i18next": {
+      "title": "i18next",
+      "description": "強大的國際化框架，支持多語言、複數、上下文等功能。",
+      "languageOptions": "語言選項",
+      "currentLanguage": "當前語言",
+      "selected": "已選擇",
+      "english": "English",
+      "chinese": "中文",
+      "example": "翻譯示例",
+      "sampleText": "這是一段示例文字，展示不同語言的切換效果。"
+    }
+  }
+}

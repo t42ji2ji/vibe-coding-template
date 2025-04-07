@@ -1,0 +1,28 @@
+{
+  "name": "create-vibe-template",
+  "version": "1.0.0",
+  "description": "Create a new project with vibe coding template (React, TypeScript, Tailwind CSS, Shadcn UI)",
+  "main": "index.js",
+  "bin": {
+    "create-vibe-template": "./bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "template/"
+  ],
+  "keywords": [
+    "template",
+    "create-app",
+    "react",
+    "typescript",
+    "tailwind",
+    "shadcn"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.0.0",
+    "fs-extra": "^10.0.0"
+  }
+}
