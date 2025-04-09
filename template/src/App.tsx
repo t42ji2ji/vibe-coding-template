@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/components/ThemeProvider"
 import Features from "@/pages/Features"
 import Home from "@/pages/Home"
 import { useState } from "react"
+import { Toaster } from "react-hot-toast"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import LanguageToggle from "./components/LanguageToggle"
 import { ThemeToggle } from "./components/ThemeToggle"
@@ -28,6 +29,7 @@ function App() {
                     <ThemeToggle />
                 </div>
 
+                <Toaster position="top-center" />
 
                 <Routes>
                     <Route path="/" element={<Home />} />

@@ -13,6 +13,17 @@
     "title": "Features",
     "backToHome": "Back to Home",
     "powerfulFeatures": "Powerful Features",
+    "vercel": {
+      "title": "Vercel Deployment",
+      "description": "One-click deployment to Vercel. Just run a simple command in your terminal to deploy your app to production.",
+      "deploymentSteps": "Deployment Steps",
+      "installVercel": "1. Install Vercel CLI globally",
+      "deployCommand": "2. Deploy to Vercel",
+      "visitSite": "3. Visit your site",
+      "tryCommand": "Try the command",
+      "deploySuccess": "Deployment successful!",
+      "openInBrowser": "Open in browser"
+    },
     "themeProvider": {
       "title": "Theme Provider",
       "description": "Built-in dark mode toggle with system preference detection and localStorage persistence. Based on shadcn's theme implementation using Tailwind's dark mode class strategy."
@@ -69,6 +80,32 @@
       "chinese": "中文",
       "example": "Translation Example",
       "sampleText": "This is a sample text to demonstrate language switching."
+    },
+    "toast": {
+      "title": "React Hot Toast",
+      "description": "Lightweight, customizable toast notifications for React applications. Perfect for showing success, error, or information messages.",
+      "tryToast": "Try Toast Notifications",
+      "success": "Success Toast",
+      "error": "Error Toast",
+      "info": "Info Toast",
+      "warning": "Warning Toast",
+      "promise": "Promise Toast",
+      "loading": "Loading...",
+      "successMessage": "Operation completed successfully!",
+      "errorMessage": "Something went wrong!",
+      "infoMessage": "Here's some information for you.",
+      "warningMessage": "This is a warning message.",
+      "promiseMessage": "Processing your request...",
+      "positions": {
+        "title": "Toast Positions",
+        "description": "Try different toast positions",
+        "topLeft": "Top Left",
+        "topCenter": "Top Center",
+        "topRight": "Top Right",
+        "bottomLeft": "Bottom Left",
+        "bottomCenter": "Bottom Center",
+        "bottomRight": "Bottom Right"
+      }
     }
   }
 }

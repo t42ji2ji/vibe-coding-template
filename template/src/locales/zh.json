@@ -69,6 +69,43 @@
       "chinese": "中文",
       "example": "翻譯示例",
       "sampleText": "這是一段示例文字，展示不同語言的切換效果。"
+    },
+    "toast": {
+      "title": "React Hot Toast",
+      "description": "輕量級、可自定義的 React 應用通知提示。非常適合顯示成功、錯誤或信息消息。",
+      "tryToast": "試試通知提示",
+      "success": "成功提示",
+      "error": "錯誤提示",
+      "info": "信息提示",
+      "warning": "警告提示",
+      "promise": "承諾提示",
+      "loading": "載入中...",
+      "successMessage": "操作成功完成！",
+      "errorMessage": "發生錯誤！",
+      "infoMessage": "這裡有一些信息給您。",
+      "warningMessage": "這是一條警告消息。",
+      "promiseMessage": "正在處理您的請求...",
+      "positions": {
+        "title": "提示位置",
+        "description": "嘗試不同的提示位置",
+        "topLeft": "左上角",
+        "topCenter": "頂部中間",
+        "topRight": "右上角",
+        "bottomLeft": "左下角",
+        "bottomCenter": "底部中間",
+        "bottomRight": "右下角"
+      }
+    },
+    "vercel": {
+      "title": "Vercel 部署",
+      "description": "一鍵部署到 Vercel。只需在終端機中執行簡單的命令，即可將您的應用程式部署到生產環境。",
+      "deploymentSteps": "部署步驟",
+      "installVercel": "1. 全局安裝 Vercel CLI",
+      "deployCommand": "2. 部署到 Vercel",
+      "visitSite": "3. 訪問您的網站",
+      "tryCommand": "試試命令",
+      "deploySuccess": "部署成功！",
+      "openInBrowser": "在瀏覽器中打開"
     }
   }
 }

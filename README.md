@@ -6,10 +6,6 @@
 
 Vibe Coding for ai developer. A modern React + Vite template with dark mode, animations, and i18n support.
 
-[English](#english) | [繁體中文](#繁體中文)
-
-## English
-
 ### 🚀 Quick Start
 
 ```bash
@@ -30,28 +26,16 @@ pnpm dev
 - 🎭 **Lucide Icons** - Beautiful and consistent icons
 - 🖱️ **Custom Cursor** - Customizable cursor effects
 
-## 繁體中文
-
-### 🚀 快速開始
-
-```bash
-npx create-vibe-template my-app
-cd my-app
-pnpm install
-pnpm dev
-```
-
-### ✨ 特色功能
-
-- 🌓 **主題切換** - 內建深色模式，支援系統主題偵測
-- 🎨 **Tailwind CSS** - 實用優先的 CSS 框架，支援深色模式
-- 💫 **Framer Motion** - 強大的 React 動畫函式庫
-- 🎯 **Shadcn/UI** - 高品質、無障礙的 React 元件
-- 🌐 **i18n** - 支援中英文的國際化功能
-- 📱 **React Router** - 流暢的客戶端路由
-- 🎭 **Lucide Icons** - 精美且一致的圖示
-- 🖱️ **自訂游標** - 可自訂的游標效果
-
-## 📄 License
-
 MIT License
+
+
+
+### Publish
+
+```
+ npm i -g vercel
+ ```
+發布
+ ```
+ vercel publish
+ ```

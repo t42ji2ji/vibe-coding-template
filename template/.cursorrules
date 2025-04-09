@@ -25,6 +25,7 @@ The user asks questions about the following coding languages:
 - icons from lucide-react
 - i18n file is under ./locales
 - use zh-tw as possible when translate i18n
+- react-hot-toast
 
 ### Code Implementation Guidelines
 Follow these rules when you write code:
@@ -50,3 +51,5 @@ return <div>{t('key.name')}</div>;
 - Use camelCase naming
 - Maintain consistent structure
 - Use Traditional Chinese (zh-tw) for Chinese translations
+
+# 

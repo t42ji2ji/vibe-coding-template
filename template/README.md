@@ -75,4 +75,16 @@ pnpm build
 │   └── index.css    # Global styles with Tailwind
 ├── index.html
 └── ... config files
-``` # vibe-coding-template
+```
+
+### Publish
+install vercel
+```
+ npm i -g vercel
+ ```
+
+ publish to vercel
+
+ ```
+ vercel publish
+ ```

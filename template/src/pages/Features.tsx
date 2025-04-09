@@ -7,6 +7,7 @@ import { motion } from "framer-motion"
 import i18n from "i18next"
 import { ArrowLeft, Bell, ExternalLink, Home, Menu, Moon, Search, Settings, Sun, User } from "lucide-react"
 import { useState } from "react"
+import toast from "react-hot-toast"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 
@@ -206,6 +207,234 @@ const { theme, setTheme } = useTheme()
                             </div>
                         </motion.div>
 
+                        {/* React Hot Toast */}
+                        <motion.div variants={item} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 className="text-2xl font-semibold mb-4">
+                                    <a href="https://react-hot-toast.com" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center">
+                                        {t("features.toast.title")}
+                                        <ExternalLink className="h-4 w-4 ml-2" />
+                                    </a>
+                                </h3>
+                                <p className="text-muted-foreground mb-4">{t("features.toast.description")}</p>
+                                <div className="bg-slate-900 p-4 rounded-md overflow-x-auto">
+                                    <pre className="text-sm text-pink-400">
+                                        <code>{`import toast from 'react-hot-toast'
+
+// Success toast
+toast.success('Operation completed!')
+
+// Error toast
+toast.error('Something went wrong!')
+
+// Promise toast
+toast.promise(
+  fetchData(),
+  {
+    loading: 'Loading...',
+    success: 'Data fetched!',
+    error: 'Error fetching data'
+  }
+)`}</code>
+                                    </pre>
+                                </div>
+                            </div>
+
+                            {/* Toast Demo */}
+                            <div className="flex justify-center">
+                                <Card className="w-full max-w-sm">
+                                    <CardContent className="pt-6">
+                                        <div className="space-y-4">
+                                            <h4 className="font-medium">{t("features.toast.tryToast")}</h4>
+                                            <div className="grid grid-cols-2 gap-2">
+                                                <Button
+                                                    variant="outline"
+                                                    size="sm"
+                                                    onClick={() => toast.success(t("features.toast.successMessage"))}
+                                                    className="w-full"
+                                                >
+                                                    {t("features.toast.success")}
+                                                </Button>
+                                                <Button
+                                                    variant="outline"
+                                                    size="sm"
+                                                    onClick={() => toast.error(t("features.toast.errorMessage"))}
+                                                    className="w-full"
+                                                >
+                                                    {t("features.toast.error")}
+                                                </Button>
+                                                <Button
+                                                    variant="outline"
+                                                    size="sm"
+                                                    onClick={() => toast(t("features.toast.infoMessage"))}
+                                                    className="w-full"
+                                                >
+                                                    {t("features.toast.info")}
+                                                </Button>
+                                                <Button
+                                                    variant="outline"
+                                                    size="sm"
+                                                    onClick={() => toast(t("features.toast.warningMessage"), { icon: '⚠️' })}
+                                                    className="w-full"
+                                                >
+                                                    {t("features.toast.warning")}
+                                                </Button>
+                                            </div>
+                                            <Button
+                                                variant="default"
+                                                size="sm"
+                                                onClick={() => {
+                                                    const promise = new Promise((resolve) => {
+                                                        setTimeout(() => resolve('success'), 2000)
+                                                    })
+                                                    toast.promise(promise, {
+                                                        loading: t("features.toast.loading"),
+                                                        success: t("features.toast.successMessage"),
+                                                        error: t("features.toast.errorMessage"),
+                                                    })
+                                                }}
+                                                className="w-full"
+                                            >
+                                                {t("features.toast.promise")}
+                                            </Button>
+
+                                            <div className="space-y-2">
+                                                <h4 className="font-medium">{t("features.toast.positions.title")}</h4>
+                                                <p className="text-sm text-muted-foreground">{t("features.toast.positions.description")}</p>
+                                                <div className="grid grid-cols-3 gap-2">
+                                                    <Button
+                                                        variant="outline"
+                                                        size="sm"
+                                                        onClick={() => toast.success(t("features.toast.successMessage"), { position: "top-left" })}
+                                                        className="w-full"
+                                                    >
+                                                        {t("features.toast.positions.topLeft")}
+                                                    </Button>
+                                                    <Button
+                                                        variant="outline"
+                                                        size="sm"
+                                                        onClick={() => toast.success(t("features.toast.successMessage"), { position: "top-center" })}
+                                                        className="w-full"
+                                                    >
+                                                        {t("features.toast.positions.topCenter")}
+                                                    </Button>
+                                                    <Button
+                                                        variant="outline"
+                                                        size="sm"
+                                                        onClick={() => toast.success(t("features.toast.successMessage"), { position: "top-right" })}
+                                                        className="w-full"
+                                                    >
+                                                        {t("features.toast.positions.topRight")}
+                                                    </Button>
+                                                    <Button
+                                                        variant="outline"
+                                                        size="sm"
+                                                        onClick={() => toast.success(t("features.toast.successMessage"), { position: "bottom-left" })}
+                                                        className="w-full"
+                                                    >
+                                                        {t("features.toast.positions.bottomLeft")}
+                                                    </Button>
+                                                    <Button
+                                                        variant="outline"
+                                                        size="sm"
+                                                        onClick={() => toast.success(t("features.toast.successMessage"), { position: "bottom-center" })}
+                                                        className="w-full"
+                                                    >
+                                                        {t("features.toast.positions.bottomCenter")}
+                                                    </Button>
+                                                    <Button
+                                                        variant="outline"
+                                                        size="sm"
+                                                        onClick={() => toast.success(t("features.toast.successMessage"), { position: "bottom-right" })}
+                                                        className="w-full"
+                                                    >
+                                                        {t("features.toast.positions.bottomRight")}
+                                                    </Button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </motion.div>
+
+                        {/* i18next */}
+                        <motion.div variants={item} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 className="text-2xl font-semibold mb-4">
+                                    <a href="https://www.i18next.com" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center">
+                                        i18next
+                                        <ExternalLink className="h-4 w-4 ml-2" />
+                                    </a>
+                                </h3>
+                                <p className="text-muted-foreground mb-4">{t("features.i18next.description")}</p>
+                                <div className="bg-slate-900 p-4 rounded-md overflow-x-auto">
+                                    <pre className="text-sm text-orange-400">
+                                        <code>{`// 1. Initialize i18next
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
+
+i18n.use(initReactI18next).init({
+  resources: {
+    en: { translation: enTranslations },
+    zh: { translation: zhTranslations }
+  },
+  lng: 'en',
+  fallbackLng: 'en'
+})
+
+// 2. Use translations in components
+const { t } = useTranslation()
+t('features.title')
+
+// 3. Change language
+i18n.changeLanguage('zh')`}</code>
+                                    </pre>
+                                </div>
+                            </div>
+
+                            {/* i18next Demo */}
+                            <div className="flex justify-center">
+                                <Card className="w-full max-w-sm">
+                                    <CardContent className="pt-6">
+                                        <div className="space-y-4">
+                                            <h4 className="font-medium">{t("features.i18next.languageOptions")}</h4>
+                                            <div className="flex flex-col gap-3">
+                                                <div className="flex items-center justify-between">
+                                                    <span>{t("features.i18next.currentLanguage")}</span>
+                                                    <span className="font-medium">{t("features.i18next.selected")}</span>
+                                                </div>
+                                                <div className="grid grid-cols-2 gap-2">
+                                                    <Button
+                                                        variant="outline"
+                                                        size="sm"
+                                                        onClick={() => i18n.changeLanguage("en")}
+                                                        className="w-full"
+                                                    >
+                                                        {t("features.i18next.english")}
+                                                    </Button>
+                                                    <Button
+                                                        variant="outline"
+                                                        size="sm"
+                                                        onClick={() => i18n.changeLanguage("zh")}
+                                                        className="w-full"
+                                                    >
+                                                        {t("features.i18next.chinese")}
+                                                    </Button>
+                                                </div>
+                                                <div className="bg-card p-4 rounded-lg border">
+                                                    <div className="space-y-2">
+                                                        <p className="text-sm">{t("features.i18next.example")}</p>
+                                                        <p className="text-sm font-medium">{t("features.i18next.sampleText")}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </motion.div>
+
                         {/* Framer Motion */}
                         <motion.div variants={item} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                             <div>
@@ -346,83 +575,6 @@ const navigate = useNavigate();
                             </div>
                         </motion.div>
 
-                        {/* i18next */}
-                        <motion.div variants={item} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                            <div>
-                                <h3 className="text-2xl font-semibold mb-4">
-                                    <a href="https://www.i18next.com" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center">
-                                        i18next
-                                        <ExternalLink className="h-4 w-4 ml-2" />
-                                    </a>
-                                </h3>
-                                <p className="text-muted-foreground mb-4">{t("features.i18next.description")}</p>
-                                <div className="bg-slate-900 p-4 rounded-md overflow-x-auto">
-                                    <pre className="text-sm text-orange-400">
-                                        <code>{`// 1. Initialize i18next
-import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
-
-i18n.use(initReactI18next).init({
-  resources: {
-    en: { translation: enTranslations },
-    zh: { translation: zhTranslations }
-  },
-  lng: 'en',
-  fallbackLng: 'en'
-})
-
-// 2. Use translations in components
-const { t } = useTranslation()
-t('features.title')
-
-// 3. Change language
-i18n.changeLanguage('zh')`}</code>
-                                    </pre>
-                                </div>
-                            </div>
-
-                            {/* i18next Demo */}
-                            <div className="flex justify-center">
-                                <Card className="w-full max-w-sm">
-                                    <CardContent className="pt-6">
-                                        <div className="space-y-4">
-                                            <h4 className="font-medium">{t("features.i18next.languageOptions")}</h4>
-                                            <div className="flex flex-col gap-3">
-                                                <div className="flex items-center justify-between">
-                                                    <span>{t("features.i18next.currentLanguage")}</span>
-                                                    <span className="font-medium">{t("features.i18next.selected")}</span>
-                                                </div>
-                                                <div className="grid grid-cols-2 gap-2">
-                                                    <Button
-                                                        variant="outline"
-                                                        size="sm"
-                                                        onClick={() => i18n.changeLanguage("en")}
-                                                        className="w-full"
-                                                    >
-                                                        {t("features.i18next.english")}
-                                                    </Button>
-                                                    <Button
-                                                        variant="outline"
-                                                        size="sm"
-                                                        onClick={() => i18n.changeLanguage("zh")}
-                                                        className="w-full"
-                                                    >
-                                                        {t("features.i18next.chinese")}
-                                                    </Button>
-                                                </div>
-                                                <div className="bg-card p-4 rounded-lg border">
-                                                    <div className="space-y-2">
-                                                        <p className="text-sm">{t("features.i18next.example")}</p>
-                                                        <p className="text-sm font-medium">{t("features.i18next.sampleText")}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            </div>
-                        </motion.div>
-
                         {/* Lucide React */}
                         <motion.div variants={item} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                             <div>
@@ -556,6 +708,73 @@ i18n.changeLanguage('zh')`}</code>
                                                         <Button variant="outline">{t("features.customCursor.button")}</Button>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </motion.div>
+
+                        {/* Vercel Deployment */}
+                        <motion.div variants={item} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 className="text-2xl font-semibold mb-4">
+                                    <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center">
+                                        {t("features.vercel.title")}
+                                        <ExternalLink className="h-4 w-4 ml-2" />
+                                    </a>
+                                </h3>
+                                <p className="text-muted-foreground mb-4">{t("features.vercel.description")}</p>
+                                <div className="bg-slate-900 p-4 rounded-md overflow-x-auto">
+                                    <pre className="text-sm text-violet-400">
+                                        <code>{`# Install Vercel CLI
+npm i -g vercel
+
+# Deploy to Vercel
+vercel
+
+# Visit your site`}</code>
+                                    </pre>
+                                </div>
+                            </div>
+
+                            {/* Vercel Demo */}
+                            <div className="flex justify-center">
+                                <Card className="w-full max-w-sm">
+                                    <CardContent className="pt-6">
+                                        <div className="space-y-4">
+                                            <h4 className="font-medium">{t("features.vercel.deploymentSteps")}</h4>
+                                            <div className="flex flex-col gap-3">
+                                                <div className="bg-card p-4 rounded-lg border">
+                                                    <p className="text-sm mb-2">{t("features.vercel.installVercel")}</p>
+                                                    <Button
+                                                        variant="outline"
+                                                        size="sm"
+                                                        onClick={() => {
+                                                            navigator.clipboard.writeText("npm i -g vercel")
+                                                            toast.success("Command copied to clipboard!")
+                                                        }}
+                                                        className="w-full"
+                                                    >
+                                                        npm i -g vercel
+                                                    </Button>
+                                                </div>
+
+                                                <div className="bg-card p-4 rounded-lg border">
+                                                    <p className="text-sm mb-2">{t("features.vercel.deployCommand")}</p>
+                                                    <Button
+                                                        variant="outline"
+                                                        size="sm"
+                                                        onClick={() => {
+                                                            navigator.clipboard.writeText("vercel")
+                                                            toast.success("Command copied to clipboard!")
+                                                        }}
+                                                        className="w-full"
+                                                    >
+                                                        vercel
+                                                    </Button>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </CardContent>

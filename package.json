@@ -1,6 +1,6 @@
 {
   "name": "create-vibe-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a new project with vibe coding template (React, TypeScript, Tailwind CSS, Shadcn UI)",
   "main": "index.js",
   "bin": {
