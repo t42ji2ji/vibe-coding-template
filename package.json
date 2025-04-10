@@ -1,6 +1,6 @@
 {
   "name": "create-vibe-template",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create a new project with vibe coding template (React, TypeScript, Tailwind CSS, Shadcn UI)",
   "main": "index.js",
   "bin": {
@@ -24,5 +24,9 @@
     "chalk": "^4.1.2",
     "commander": "^9.0.0",
     "fs-extra": "^10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/t42ji2ji/vibe-coding-template.git"
   }
 }

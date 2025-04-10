@@ -17,11 +17,13 @@ pnpm dev
 
 ### ✨ Features
 
+- 🚀 **Vercel Deployment** - Easy deployment with Vercel CLI
+- 🌐 **i18n** - Internationalization with English and Traditional Chinese support
+- 🔥 **React Hot Toast** - Notifications with customizable positions and styles
 - 🌓 **Theme Provider** - Built-in dark mode support with system preference detection
 - 🎨 **Tailwind CSS** - Utility-first CSS framework with dark mode support
 - 💫 **Framer Motion** - Powerful animation library for React
 - 🎯 **Shadcn/UI** - High-quality, accessible React components
-- 🌐 **i18n** - Internationalization with English and Traditional Chinese support
 - 📱 **React Router** - Seamless client-side routing
 - 🎭 **Lucide Icons** - Beautiful and consistent icons
 - 🖱️ **Custom Cursor** - Customizable cursor effects
