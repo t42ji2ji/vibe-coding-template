@@ -130,7 +130,7 @@ const CustomCursor = ({
             // Restore default cursor
             document.body.style.cursor = 'auto'
         }
-    }, [isVisible, invertOnDarkMode])
+    }, [isVisible, invertOnDarkMode, checkIfBackgroundIsDark])
 
     // Get current cursor color based on background
     const currentColor = invertOnDarkMode && isOverDarkBackground ? lightColor : color;
@@ -148,8 +148,8 @@ const CustomCursor = ({
             transition: {
                 type: 'spring',
                 damping: 25,
-                stiffness: 300,
-                mass: 0.5
+                stiffness: 200,
+                mass: 2
             }
         },
         hover: {
@@ -163,8 +163,8 @@ const CustomCursor = ({
             transition: {
                 type: 'spring',
                 damping: 25,
-                stiffness: 300,
-                mass: 0.5
+                stiffness: 200,
+                mass: 2
             }
         },
         click: {
@@ -185,7 +185,7 @@ const CustomCursor = ({
         }
     }
 
-    // Dot cursor (follows exactly)
+    // Dot cursor (follows exactly - no delay)
     const dotVariants = {
         default: {
             width: 4,
@@ -195,9 +195,7 @@ const CustomCursor = ({
             backgroundColor: currentColor,
             opacity: 0.75,
             transition: {
-                type: 'tween',
-                ease: 'backOut',
-                duration: 0.05
+                duration: 0
             }
         },
         hover: {
@@ -206,7 +204,10 @@ const CustomCursor = ({
             x: position.x - 4,
             y: position.y - 4,
             backgroundColor: currentColor,
-            opacity: 1
+            opacity: 1,
+            transition: {
+                duration: 0
+            }
         },
         click: {
             width: 10,
@@ -214,7 +215,10 @@ const CustomCursor = ({
             x: position.x - 5,
             y: position.y - 5,
             backgroundColor: currentColor,
-            opacity: 1
+            opacity: 1,
+            transition: {
+                duration: 0
+            }
         }
     }
 

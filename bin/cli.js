@@ -26,6 +26,13 @@ program
 
     fs.copySync(templateDir, targetDir);
 
+    // Rename gitignore to .gitignore
+    const gitignoreSource = path.join(targetDir, "gitignore");
+    const gitignoreTarget = path.join(targetDir, ".gitignore");
+    if (fs.existsSync(gitignoreSource)) {
+      fs.renameSync(gitignoreSource, gitignoreTarget);
+    }
+
     console.log(chalk.green("Project created successfully!"));
     console.log("");
     console.log("Next steps:");
